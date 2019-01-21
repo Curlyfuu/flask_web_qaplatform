@@ -1,0 +1,23 @@
+.logo{
+    width: 85px;
+    /*margin: 0px;*/
+    /*border-bottom: 1px;*/
+}
+.navbar-brand{
+    padding: 5px;
+}
+
+body{
+    background: #f0f0f0;
+}
+.main{
+    background: #fff;
+    /*width: 800px;*/
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 10px;
+}
+.page-title{
+    text-align: center;
+}
