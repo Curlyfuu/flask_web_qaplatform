@@ -1,7 +1,8 @@
 # flask_web_qaplatform
 a web app about Q&amp;A platform based on flask and python 3
 
-##Rewquirement:
+Rewquirement:
+===
 ###1.packages:
 1. flask 1.0.2
 2. flask-sqlalchemy
