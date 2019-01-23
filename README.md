@@ -14,7 +14,7 @@ Rewquirement:
 
 
 ## How to use:
-###1. mysql
+### 1. mysql
 ```
 >>mysql -uroot -p
 >>password:
@@ -28,6 +28,7 @@ Rewquirement:
 >>python manage.py db migrate
 >>python manage.py db upgrade
 >>python zlktqa.py
+```
 
 # The-end
 
