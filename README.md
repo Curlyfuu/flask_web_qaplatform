@@ -8,7 +8,7 @@ Rewquirement:
 2. flask-sqlalchemy
 3. flask-migrate
 4. flask-script
-###2.software:
+### 2.software:
 1. python 3.7
 2. mysql
 
