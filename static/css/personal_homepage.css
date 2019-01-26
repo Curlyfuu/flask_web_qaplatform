@@ -17,7 +17,7 @@
 .avatar-group .avatar{
     width: 40px;
     height: 40px;
-    
+
 }
 .question-group{
     float: left;
@@ -37,4 +37,14 @@
 }
 .question-content{
     height: 8ch;
+}
+#delete_article{
+    /*display: inline-block;*/
+    float: right;
+    margin-left: 20px;
+    border-bottom: 20px;
+}
+#delete_article a{
+    color: #fff;
+
 }

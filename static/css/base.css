@@ -21,3 +21,11 @@ body{
 .page-title{
     text-align: center;
 }
+.navbar-header a img{
+    width:47px;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    color: #555;
+    background-color: #f7f7f7;
+    line-height:25px;
+}
