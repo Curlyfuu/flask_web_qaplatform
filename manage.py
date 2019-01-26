@@ -2,7 +2,7 @@
 
 from flask_script import Manager
 from flask_migrate import Migrate,MigrateCommand
-from zlktqa import app
+from wake_up import app
 from exts import db
 from models import User,Question,Comment
 

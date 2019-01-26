@@ -2,38 +2,30 @@
 
 
 # flask_web_qaplatform
-基于flask及python3的十分简陋的“云笔记”平台
+a web app about Q&amp;A platform based on flask and python 3
 
-### [程序源代码](https://github.com/wake-up-smiling/flask_web_qaplatform)
+### [++程序源代码++](https://github.com/wake-up-smiling/flask_web_qaplatform)、
 
 https://github.com/wake-up-smiling/flask_web_qaplatform
 
-## [点击跳转](http://188.131.232.21) 
-地址:188.131.232.21:80
+Rewquirement:
 
-## 注意：
-注册做的很随意，不要用自己正在使用的任何密码，我在后台看得到
-
-
-
-## 要求:
-
-### 1.包:
+### 1.packages:
 1. flask 1.0.2
 2. flask-sqlalchemy
 3. flask-migrate
 4. flask-script
-### 2.软件:
+### 2.software:
 1. python 3.7
 2. mysql
 
 
-## 如何使用:
+## How to use:
 ### 1. mysql
 ```
 >>mysql -uroot -p
 >>password:
->>create database wake_up;
+>>create database zlktqa_demo;
 >>exit;
 ```
 
@@ -42,24 +34,22 @@ https://github.com/wake-up-smiling/flask_web_qaplatform
 >>python manage.py db init
 >>python manage.py db migrate
 >>python manage.py db upgrade
->>python wake_up.py
+>>python zlktqa.py
 ```
-
-> ## 效果图
-### 主页
- 
->![image](pic/index.png)
-
-### 详情页
-
->![image](pic/detail.png)
-
-### 评论功能
-
->![image](pic/comment.png)
 
 # The-end
 
 
+> header 1 | header 2
 
+---
+
+> ---|---
+> row 1 col 1 | row 1 col 2
+> row 2 col 1 | row 2 col 2
+
+![image](http://note.youdao.com/favicon.ico)
+
+# h1
+>![image](http://note.youdao.com/favicon.ico)
 
