@@ -12,7 +12,7 @@ https://github.com/wake-up-smiling/flask_web_qaplatform
 
 地址：188.131.232.21:80
 
-##注意：
+## 注意：
 注册时不要使用自己正在用的任何密码，我在后台能看到
 
 
