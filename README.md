@@ -8,7 +8,8 @@
 
 https://github.com/wake-up-smiling/flask_web_qaplatform
 
-## [点击跳转](188.131.232.21:80) 188.131.232.21:80
+## [点击跳转](188.131.232.21:80) 
+地址:188.131.232.21:80
 
 
 https://github.com/wake-up-smiling/flask_web_qaplatform
