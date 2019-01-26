@@ -3,27 +3,50 @@
 {% block title %}首页{% endblock %}
 {% block head %}
     <link rel="stylesheet" href="{{ url_for('static',filename='css/index.css') }}">
+    <script type="text/javascript" src="{{ url_for('static',filename='showdown-master/dist/showdown.min.js') }}"></script>
 {% endblock %}
 {% block main %}
     <ul class="qa-list">
+{#    <script type="text/javascript">#}
+{#        id = 5;#}
+{#    </script>#}
+
         {% for question in questions %}
+
             <li>
-            <div class="avatar-group">
-                <img src="{{ url_for('static',filename='images/flask.png') }}" alt="" class="avatar">
-            </div>
-            <div class="question-group">
-                <p class="question-title"><a href="{{ url_for('detail',question_id=question.id) }}">{{ question.title }}</a></p>
-                <p class="question-content">{{ question.content }}</p>
-                <div class="question-info">
-                    <span class="question-author">{{ question.author.username }}</span>
-                    <span class="question-time">{{ question.create_time }}</span>
+                <div class="avatar-group">
+                    <img src="{{ url_for('static',filename='images/google_din1.png') }}" alt="" class="avatar">
                 </div>
-            </div>
+                <div class="question-group">
+                    
+                        <p class="question-title"><a href="{{ url_for('detail',question_id=question.id) }}">{{ question.title }}</a></p>
+                        <textarea style="visibility: hidden;" id="{{ question.id }}zz">{{ question.content }}</textarea>
+                        <div id="{{ question.id }}ll" class="question-content"></div>
+                        <div class="question-info">
+                            <span class="question-author">{{ question.author.username }}</span>
+                            <span class="question-time">{{ question.create_time }}</span>
+                        </div>
+                </div>
+                    <script type="text/javascript">
+
+                        {#var text = "{{ question.content }}"#}
+                        var text = document.getElementById("{{ question.id }}zz").value;
+                        {#console.log(typeof(text));#}
+                        var converter = new showdown.Converter();
+                        var html = converter.makeHtml(text);
+                        document.getElementById("{{ question.id }}ll").innerHTML = html;
+
+                    </script>
 
 
-        </li>
+
+            </li>
+
         {% endfor %}
 
 
     </ul>
+
+
+
 {% endblock %}

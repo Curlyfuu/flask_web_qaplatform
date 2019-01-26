@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block title %}
+   {{ user_f.username }}的个人主页
+
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/personal_homepage.css') }}">
+    <script type="text/javascript" src="{{ url_for('static',filename='showdown-master/dist/showdown.min.js') }}"></script>
+{% endblock %}
+
+{% block main %}
+    <ul class="qa-list">
+    {% if not questions %}
+        <h2>这个家伙啥也没写过</h2>
+    {% else %}
+    {% for question in questions %}
+
+            <li>
+                <div class="avatar-group">
+                    <img src="{{ url_for('static',filename='images/flask.png') }}" alt="" class="avatar">
+                </div>
+                <div class="question-group">
+
+                    <p class="question-title"><a href="{{ url_for('detail',question_id=question.id) }}">{{ question.title }}</a></p>
+
+                    {% if question.author_id == user.id %}
+                        <div class="btn btn-primary" id="delete_article">
+                            <a href="{{ url_for('delete_article',question_id=question.id) }}">删除</a>
+                        </div>
+                    {% endif %}
+
+
+                
+
+                    <div class="question-info">
+{#                            <span class="question-author">{{ question.author.username }}</span>#}
+                        <span class="question-time">{{ question.create_time }}</span>
+                    </div>
+                </div>
+
+
+
+            </li>
+
+    {% endfor %}
+
+
+
+    {% endif %}
+    </ul>
+
+{% endblock %}

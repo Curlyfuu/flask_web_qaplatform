@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block title %}
+修改
+{% endblock %}
+
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/modification.css') }}">
+    <script type="text/javascript" src="{{ url_for('static',filename='showdown-master/dist/showdown.min.js') }}"></script>
+
+{% endblock %}
+
+
+{% block main %}
+    <h3 class="page-title">文章修改</h3>
+    <form action="" method="post">
+        <div class="form-container">
+            <div class="form-group">
+                <input type="hidden" name="question_id" value="{{ question.id }}">
+{#                <input type="text" placeholder="请输入标题" name="title" class="form-control">#}
+                <textarea  cols="30" rows="1" style="height: 35px; font-weight: 700;" name="title" id="form-title" class="form-control">{{ question.title }}</textarea>
+            </div>
+            <div class="form-group">
+                <textarea  cols="30" rows="20" name="content" id="form-content" class="form-control" onkeyup="convert()" >{{ question.content }}</textarea>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary">提交修改</button>
+            </div>
+
+        </div>
+    </form>
+    <hr>
+    <h3>预览：</h3>
+    <div id="pre-view"></div>
+    <script type="text/javascript">
+        function convert(){
+
+                    {#var text = "{{ question.content }}"#}
+                    var text = document.getElementById("form-content").value;
+                    {#console.log(typeof(text));#}
+                    var converter = new showdown.Converter();
+                    var html = converter.makeHtml(text);
+                    document.getElementById("pre-view").innerHTML = html;
+        }
+
+    </script>
+
+
+
+{% endblock %}
