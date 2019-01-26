@@ -42,7 +42,7 @@ https://github.com/wake-up-smiling/flask_web_qaplatform
 >>python manage.py db init
 >>python manage.py db migrate
 >>python manage.py db upgrade
->>python zlktqa.py
+>>python wake_up.py
 ```
 
 > ## 效果图
