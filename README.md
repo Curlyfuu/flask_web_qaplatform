@@ -33,7 +33,7 @@ https://github.com/wake-up-smiling/flask_web_qaplatform
 ```
 >>mysql -uroot -p
 >>password:
->>create database zlktqa_demo;
+>>create database wake_up;
 >>exit;
 ```
 
