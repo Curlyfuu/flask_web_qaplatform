@@ -58,7 +58,7 @@ https://github.com/wake-up-smiling/flask_web_qaplatform
 
 ### 评论功能
 
->![image](pic/comment.png)
+>![image](pic/comment1.png)
 
 # The-end
 
